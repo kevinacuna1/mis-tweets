@@ -50,6 +50,10 @@ function agregarTweet(e) {
 
 // Muestra un mensaje de error
 function mostrarError(error) {
+    // Limpiar cualquier alerta previa
+    limpiarAlerta();
+
+    // Crear el mensaje de error
     const mensajeError = document.createElement('p');
     mensajeError.textContent = error;
     mensajeError.classList.add('error');
@@ -113,5 +117,12 @@ function borrarTweet(id) {
 function limpiarHTML() {
     while (listaTweets.firstChild) {
         listaTweets.removeChild(listaTweets.firstChild);
+    }
+}
+
+function limpiarAlerta() {
+    const alerta = document.querySelector('.error');
+    if (alerta) {
+        alerta.remove();
     }
 }
