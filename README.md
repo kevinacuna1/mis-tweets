@@ -52,17 +52,9 @@
 
 ## 👨‍💻 Autor
 
-**Tu Nombre**
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- LinkedIn: [Tu Perfil](https://linkedin.com/in/tu-perfil)
-- Email: tu.email@ejemplo.com
+**Kevin Acuña**
+- GitHub: [@kevinacuna1](https://github.com/kevinacuna1)
+- LinkedIn: [Kevin Acuña](https://www.linkedin.com/in/kevinacu%C3%B1a/)
+- Email: kevinacuna.uy@gmail.com
 
 ⭐ ¡Si te gustó este proyecto, dale una estrella en GitHub!
-
----
-
-<div align="center">
-  <img src="https://img.shields.io/github/stars/tu-usuario/tweet-manager-localstorage?style=social" alt="GitHub stars">
-  <img src="https://img.shields.io/github/forks/tu-usuario/tweet-manager-localstorage?style=social" alt="GitHub forks">
-  <img src="https://img.shields.io/github/issues/tu-usuario/tweet-manager-localstorage" alt="GitHub issues">
-</div>
