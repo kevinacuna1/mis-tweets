@@ -22,8 +22,22 @@ function agregarTweet(e) {
         mostrarError('Un tweet no puede ir vacío');
         return; // Evita que se ejecuten más líneas de código
     }
+
+    const tweetObj = {
+        // Date.now() podemos usarlo para crear un ID único.
+        // Son los milisegundos desde 1970 hasta ahora.
+        id: Date.now(),
+        tweet
+    };
     
-    console.log('Agregando tweet...');
+    // Agregar el tweet al arreglo de tweets
+    tweets = [...tweets, tweetObj];
+
+    // Una vez agregado, se crea el HTML
+    crearHTML();
+
+    // Reiniciar el formulario
+    formulario.reset();
 }
 
 // Muestra un mensaje de error
@@ -40,4 +54,29 @@ function mostrarError(error) {
     setTimeout(() => {
         mensajeError.remove();
     }, 3000);
+}
+// Muestra un listado de los tweets
+function crearHTML() {
+    // Limpiar el HTML previo
+    limpiarHTML();
+    
+    if(tweets.length > 0) {
+        tweets.forEach( tweet => {
+            // Crear el HTML
+            const li = document.createElement('li');
+
+            // Añadir el texto
+            li.textContent = tweet.tweet;
+
+            // Insertar en el HTML
+            listaTweets.appendChild(li);            
+        });
+    }
+}
+
+// Limpiar el HTML
+function limpiarHTML() {
+    while(listaTweets.firstChild) {
+        listaTweets.removeChild(listaTweets.firstChild);
+    }
 }
